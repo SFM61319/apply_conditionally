@@ -1,14 +1,8 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+//! # Apply Conditionally
+//!
+//! *Chain and apply methods on objects conditionally.*
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#![no_std]
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+mod into_either;
+pub use into_either::IntoEither;
