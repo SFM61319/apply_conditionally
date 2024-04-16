@@ -1,15 +1,15 @@
 [package]
-name = "apply_conditionally"
-version = "1.0.0"
-edition = "2021"
-authors = ["Avinash Maddikonda <svasssakavi@gmail.com>"]
-categories = ["no-std", "no-std::no-alloc", "rust-patterns"]
+authors     = ["Avinash Maddikonda <svasssakavi@gmail.com>"]
+categories  = ["no-std", "no-std::no-alloc", "rust-patterns"]
 description = "Chain and apply methods on objects conditionally."
-keywords = ["apply", "chain", "meta", "condition"]
-license = "MIT"
-repository = "https://github.com/SFM61319/apply_conditionally"
+edition     = "2021"
+keywords    = ["apply", "chain", "condition", "meta"]
+license     = "MIT"
+name        = "apply_conditionally"
+repository  = "https://github.com/SFM61319/apply_conditionally"
+version     = "2.0.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-either = { version = "1.10.0", default-features = false }
+either = { version = "1.11.0", default-features = false }
