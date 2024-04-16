@@ -4,8 +4,7 @@
 
 #![no_std]
 
-mod into_either;
-pub use into_either::IntoEither;
+use either::IntoEither;
 
 /// Provides methods for conditionally applying methods on a type `Self`,
 /// whose size is constant and known at compile-time.
@@ -53,6 +52,7 @@ pub trait ApplyConditionally: Sized {
     /// let x = 2;
     /// assert_eq!(mul2(add2(x)), 8);
     /// ```
+    #[inline]
     fn apply<T, F>(self, f: F) -> T
     where
         F: FnOnce(Self) -> T,
@@ -119,6 +119,7 @@ pub trait ApplyConditionally: Sized {
     ///     [false, false, true, false, true, true, false, true]
     /// );
     /// ```
+    #[inline]
     fn apply_if<T, F>(self, condition: bool, f: F) -> either::Either<T, Self>
     where
         F: FnOnce(Self) -> T,
@@ -165,6 +166,7 @@ pub trait ApplyConditionally: Sized {
     ///     vec![(b'a', b'b'), (b'b', b'c'), (b'c', b'd')]
     /// );
     /// ```
+    #[inline]
     fn apply_or_else<L, R, F, G>(self, condition: bool, f: F, g: G) -> either::Either<L, R>
     where
         F: FnOnce(Self) -> L,
