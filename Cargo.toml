@@ -7,7 +7,7 @@ keywords    = ["apply", "chain", "condition", "meta"]
 license     = "MIT"
 name        = "apply_conditionally"
 repository  = "https://github.com/SFM61319/apply_conditionally"
-version     = "1.0.0"
+version     = "2.0.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
